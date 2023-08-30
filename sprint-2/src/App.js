@@ -1,6 +1,7 @@
 import "./App.scss";
 import React, { useState } from "react";
 import VideoData from "./data/video-details.json";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import components
 import Header from "./components/Header/Header";
@@ -20,30 +21,38 @@ function App() {
 
   return (
     <>
-      <Header />
-      <VideoPlayer currentVideo={currentVideo} />
-      <div className="main__content--container">
-        <div className="main__content--left-container">
-          <Highlights
-            title={currentVideo.title}
-            channel={currentVideo.channel}
-            timestamp={currentVideo.timestamp}
-            views={currentVideo.views}
-            likes={currentVideo.likes}
-            description={currentVideo.description}
-          />
-          <CommentForm />
-          <CommentList currentComments={currentVideo} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Header />} />
+
+          {/* <Route path="" element={<VideoList/>} /> */}
+        </Routes>
+        {/* <Header /> */}
+
+        <VideoPlayer currentVideo={currentVideo} />
+        <div className="main__content--container">
+          <div className="main__content--left-container">
+            <Highlights
+              title={currentVideo.title}
+              channel={currentVideo.channel}
+              timestamp={currentVideo.timestamp}
+              views={currentVideo.views}
+              likes={currentVideo.likes}
+              description={currentVideo.description}
+            />
+            <CommentForm />
+            <CommentList currentComments={currentVideo} />
+          </div>
+          <div className="main__content--right-container">
+            <VideoList
+              handleVideoClick={handleVideoClick}
+              videoList={videoList.filter(
+                (videoList) => videoList.id !== currentVideo.id
+              )}
+            />
+          </div>
         </div>
-        <div className="main__content--right-container">
-          <VideoList
-            handleVideoClick={handleVideoClick}
-            videoList={videoList.filter(
-              (videoList) => videoList.id !== currentVideo.id
-            )}
-          />
-        </div>
-      </div>
+      </BrowserRouter>
     </>
   );
 }

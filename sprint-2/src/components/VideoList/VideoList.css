@@ -1,0 +1,10 @@
+.videolist__nextvideos {
+  padding: 24px 32px;
+  color: #afafaf;
+  font-size: 15px;
+}
+@media (min-width: 1280px) {
+  .videolist__nextvideos {
+    border-left: 1px solid #e1e1e1;
+  }
+}

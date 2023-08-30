@@ -1,0 +1,41 @@
+.videoplayer__main {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 1280px) {
+  .videoplayer__main {
+    padding-top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .videoplayer__main {
+    padding-top: 0;
+  }
+}
+.videoplayer__main video {
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .videoplayer__main video {
+    width: 70%;
+    padding: 0 190px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .videoplayer__main video {
+    width: 70%;
+    padding: 0 120px;
+  }
+}
+@media (min-width: 1280px) {
+  .videoplayer__main {
+    padding-bottom: 0;
+    background-color: #000000;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .videoplayer__main {
+    padding-bottom: 0;
+    background-color: #000000;
+  }
+}

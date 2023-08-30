@@ -1,0 +1,10 @@
+.nav__logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+
+.nav__logo img {
+  width: 10rem;
+}
