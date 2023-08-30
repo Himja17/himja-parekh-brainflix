@@ -1,0 +1,11 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+.videolist__nextvideos {
+  padding: 24px 32px;
+  color: $silver;
+  font-size: 15px;
+  @include desktopView {
+    border-left: $border-bottom;
+  }
+}

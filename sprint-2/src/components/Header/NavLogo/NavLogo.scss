@@ -1,0 +1,12 @@
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixins";
+
+.nav__logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: $mobile-afterheadline;
+  padding-top: $mobile-beforeheadline;
+}
+.nav__logo img {
+  width: 10rem;
+}

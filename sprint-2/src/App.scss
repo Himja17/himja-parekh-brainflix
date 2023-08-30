@@ -1,0 +1,20 @@
+@import "./styles/partials/typography";
+@import "./styles/partials/variables";
+@import "./styles/partials/mixins";
+* {
+  font-family: "Avenir Regular";
+  margin: 0;
+}
+.main {
+  @include desktopView {
+    &__content--container {
+      display: flex;
+    }
+  }
+
+  &__content--left-container{
+    @include desktopView{
+      width: 70%;
+    }
+  }
+}

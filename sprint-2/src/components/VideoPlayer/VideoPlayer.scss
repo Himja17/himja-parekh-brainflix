@@ -1,0 +1,34 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.videoplayer__main {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  @include desktopView {
+    padding-top: 0;
+  }
+  @include tabletView {
+    padding-top: 0;
+  }
+
+  video {
+    width: 100%;
+    @include desktopView {
+      width: 70%;
+      padding: 0 190px;
+    }
+    @include tabletView {
+      width: 70%;
+      padding: 0 120px;
+    }
+  }
+
+  @include desktopView {
+    padding-bottom: 0;
+    background-color: $brainflix-darkblack;
+  }
+  @include tabletView {
+    padding-bottom: 0;
+    background-color: $brainflix-darkblack;
+  }
+}

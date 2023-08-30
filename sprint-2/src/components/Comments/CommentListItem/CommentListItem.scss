@@ -1,0 +1,45 @@
+@import "../../../styles/partials/typography";
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixins";
+
+.commentlist {
+  &__main {
+    display: flex;
+    margin: 0 2rem;
+    border-bottom: $border-bottom;
+    @include desktopView {
+      margin-left: 2rem;
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    font-family: "Avenir Bold";
+    color: $brainflix-black;
+    font-size: 16px;
+    line-height: 18px;
+
+    &--container {
+      width: 70%;
+      padding: 10px;
+    }
+  }
+  &__para {
+    font-family: "Avenir Regular";
+    padding-top: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+  }
+  &__timestamp {
+    color: $silver;
+    padding-top: 10px;
+  }
+  &__image--container {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: $mercury;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+}
