@@ -1,7 +1,6 @@
 import CommentListItem from "../CommentListItem/CommentListItem";
 
 const CommentList = ({ currentComments, handleVideoClick }) => {
-  console.log({ currentComments });
   return (
     <div onClick={handleVideoClick}>
       {currentComments.comments.map((comment) => {

@@ -1,10 +1,8 @@
 import "./SearchForm.scss";
 // Importing the avatar
 import avatar from "../../../assets/Images/Mohan-muruge.jpg";
-// Importing the search icon
-import searchIcon from "../../../assets/Icons/search.svg";
-// Importing the upload arrow
-import uploadArrow from "../../../assets/Icons/upload.svg";
+import { Link } from "react-router-dom";
+
 
 function SearchForm() {
   return (
@@ -21,7 +19,9 @@ function SearchForm() {
         </div>
 
         {/* Upload Button */}
-        <input type="button" value={"UPLOAD"} className="nav__upload" />
+        <Link to="/uploadVideo">
+          <input type="button" value={"UPLOAD"} className="nav__upload" />
+        </Link>
       </form>
     </>
   );

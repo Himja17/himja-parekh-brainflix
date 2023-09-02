@@ -13,8 +13,13 @@ function App() {
       <Header />
       <Routes>
         {/* <Route path="/" element={<Header />} /> */}
+        {/* The Home/Video Player Page for displaying the details of a video */}
         <Route path="/" element={<Home />} />
+        {/* <Route path="/videos" element={<Home />} /> */}
+        {/* The Video Upload Page. */}
         <Route path="/uploadVideo" element={<UploadVideo />} />
+        {/* A route that will load the video with the provided video id to be displayed using the Video Player Page */}
+        <Route path="/videos/:videoId" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

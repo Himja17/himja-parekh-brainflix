@@ -29,7 +29,7 @@
     border-bottom: $border-bottom;
     padding-bottom: 1rem;
     @include desktopView {
-    justify-content: flex-start;
+      justify-content: flex-start;
     }
   }
 
@@ -37,8 +37,8 @@
     @include desktopView {
       display: flex;
     }
-    @include tabletView{
-       display: flex;
+    @include tabletView {
+      display: flex;
     }
   }
 
@@ -69,6 +69,10 @@
     @include tabletView {
       margin-left: 30px;
       width: 150px;
+    }
+
+    &:hover {
+      background-color: $brainflix-darkblue;
     }
   }
 }

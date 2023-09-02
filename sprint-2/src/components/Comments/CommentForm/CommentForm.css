@@ -1,3 +1,5 @@
+@import "../../../styles/partials/_variables.scss";
+
 .commentform {
   padding-left: 2rem;
   padding-right: 2rem;

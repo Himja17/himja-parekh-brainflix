@@ -1,8 +1,8 @@
 import "./VideoListItem.scss";
 
-const VideoListItem = ({ id, image, title, channel, handleVideoClick }) => {
+const VideoListItem = ({ id, image, title, channel }) => {
   return (
-    <div className="videolist__main" onClick={()=>handleVideoClick(id)}>
+    <div className="videolist__main">
       <div className="videolist">
         <div key={id} className="videolist__image--container">
           <video poster={image} className="videolist__image"></video>
