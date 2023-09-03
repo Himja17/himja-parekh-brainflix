@@ -1,23 +1,77 @@
 @import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
 
 .upload__main {
-  padding: 0 15px;
+  padding: 0 25px;
+  @include desktopView {
+    padding: 0;
+  }
+  @include tabletView {
+    padding: 0;
+  }
+}
+.upload__border--top {
+  @include tabletView {
+    border-top: 1px solid $mercury;
+  }
 }
 
-.upload__video--title {
+.upload__main--sub-parent {
+  @include tabletView {
+    padding: 0 50px;
+  }
+}
+.upload__video--parent-container {
+  @include desktopView {
+    display: flex;
+    margin: 0 150px;
+    border-top: $border-bottom;
+  }
+  @include tabletView {
+    display: block;
+    border-top: $border-bottom;
+  }
+}
+
+.upload__video--title >h1 {
   font-family: "Avenir Bold";
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
   padding-top: 1.5rem;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid $mercury;
+  @include desktopView {
+    font-size: 45px;
+    line-height: 44px;
+    font-weight: bold;
+    padding: 50px 150px;
+  }
+  @include tabletView {
+    padding-bottom: 25px;
+    border-top: none;
+    margin-top: 0;
+     font-weight: bold;
+  }
+}
+
+.upload__video--container {
+  @include desktopView {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.upload__form {
+  @include desktopView {
+    width: 100%;
+    padding-left: 20px;
+  }
 }
 
 .upload__video--subheading > h2 {
   font-size: 15px;
   color: $silver;
-  padding: 1rem 0 0.55rem 0;
+  padding-top: 2rem;
 }
 .upload__video--subheading {
-  padding-bottom: 20px;
+  padding-bottom: 2px;
 }
 
 .upload__video {
@@ -27,8 +81,16 @@
   background-repeat: no-repeat;
   border-radius: 0.3125rem;
   margin-bottom: 2rem;
-  height: 10rem;
-  width: 20rem;
+  height: 30vh;
+  width: 100%;
+  @include desktopView {
+    width: 25rem;
+    height: 26vh;
+  }
+  @include tabletView {
+    width: 50%;
+    margin-bottom: 0;
+  }
 }
 .upload__text-container {
   border-radius: 4px;
@@ -38,6 +100,7 @@
   font-size: 14px;
   border: 1px solid #e1e1e1;
   color: $brainflix-black;
+  width: 100%;
 }
 
 .upload__publish--button {
@@ -64,6 +127,36 @@
   background-color: $white;
   color: $brainflix-blue;
   font-size: 17px;
-  margin: 30px 190px;
+  // margin: 30px 190px;
   font-weight: bold;
+  width: 100%;
+  padding: 30px 0;
+}
+.upload__bottom--buttons {
+  @include desktopView {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 30%;
+    align-items: center;
+  }
+  @include tabletView {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40%;
+    align-items: center;
+  }
+}
+.upload__bottom--buttons-parent {
+  @include desktopView {
+    border-top: $border-bottom;
+    margin: 0 150px;
+    display: flex;
+    justify-content: end;
+  }
+  @include tabletView {
+    border-top: $border-bottom;
+    margin: 15px 0;
+    display: flex;
+    justify-content: end;
+  }
 }

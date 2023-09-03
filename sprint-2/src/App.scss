@@ -12,8 +12,8 @@
     }
   }
 
-  &__content--left-container{
-    @include desktopView{
+  &__content--left-container {
+    @include desktopView {
       width: 70%;
     }
   }

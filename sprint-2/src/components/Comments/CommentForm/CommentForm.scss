@@ -49,6 +49,12 @@
     background-color: $alabaster;
     font-size: 14px;
     border: 1px solid $mercury;
+
+    &:focus {
+      border: 2px solid $brainflix-blue;
+      outline: none;
+    }
+
     @include desktopView {
       width: 500px;
       height: 2rem;
