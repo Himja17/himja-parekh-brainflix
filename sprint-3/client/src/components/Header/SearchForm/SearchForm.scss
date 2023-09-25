@@ -1,0 +1,79 @@
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/typography";
+@import "../../../styles/partials/mixins";
+
+.nav__avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  @include desktopView {
+    position: absolute;
+    right: 0.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+
+  }
+   @include tabletView {
+    position: absolute;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+input.nav__upload {
+  background-image: url(../../../assets/Icons/upload.svg);
+   &:hover {
+    background-color: $brainflix-darkblue;
+  }
+  @include button-style;
+  @include desktopView {
+    width: 10rem;
+    margin-right: 5rem;
+   
+  }
+  @include tabletView {
+    width: 10rem;
+    margin-right: 5rem;
+  }
+}
+
+input.nav__search-tab {
+  background-image: url(../../../assets/Icons/search.svg);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  outline: none;
+  background-position: 10px 10px;
+  border: 2px solid $mercury;
+  width: 15rem;
+  @include desktopView {
+    width: 10rem;
+    margin-right: 1.5rem;
+  }
+  @include tabletView {
+    width: 10rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.nav__search-container {
+  @include desktopView {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 1rem;
+  }
+  @include tabletView {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+
+.nav__search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: $mobile-afterheadline;
+}

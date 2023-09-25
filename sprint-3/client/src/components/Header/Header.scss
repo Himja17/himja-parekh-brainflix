@@ -1,0 +1,19 @@
+@import "../../styles/partials/mixins";
+
+.nav__container {
+  padding: 0 15px;
+}
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  @include desktopView{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+   @include tabletView{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}

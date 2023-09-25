@@ -1,0 +1,117 @@
+@import "../../styles/partials/typography";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+main {
+  padding: $default-padding;
+  @include desktopView {
+    padding: 2rem 0 2rem 2rem;
+  }
+   @include tabletView {
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+.main__title > h1 {
+  font-family: "Avenir Bold";
+  padding-bottom: 1rem;
+  border-bottom: $border-bottom;
+  @include desktopView {
+    border-bottom: none;
+    border-right: $border-bottom;
+  }
+  @include tabletView {
+    border-bottom: none;
+  }
+}
+
+.main__subtitle {
+  font-family: "Avenir Bold";
+  font-size: 13px;
+  padding-bottom: $mobile-afterheadline;
+  padding-top: $mobile-beforeheadline;
+  @include desktopView {
+    padding-top: 0;
+    font-size: 16px;
+  }
+  @include tabletView {
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  &--container {
+    display: flex;
+    align-items: center;
+    padding-bottom: $mobile-afterheadline;
+    border-bottom: $border-bottom;
+    @include desktopView {
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+    @include tabletView {
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+  }
+}
+.main__subtitle-timestamp {
+  width: 30%;
+  padding-right: 10rem;
+  @include desktopView {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+  }
+  @include tabletView {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+  }
+}
+
+.main__timestamp {
+  color: $silver;
+}
+
+.main__likes-views {
+  color: $silver;
+  padding-top: 10px;
+  @include desktopView {
+    padding-right: 50px;
+    padding-top: 0;
+  }
+  @include tabletView {
+    padding-right: 50px;
+    padding-top: 0;
+  }
+
+  img {
+    padding-right: 1rem;
+  }
+}
+
+.main__description {
+  padding-top: $mobile-beforeheadline;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  @include desktopView {
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 2rem;
+  }
+  @include tabletView {
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 2rem;
+  }
+}
+.main__likes--container {
+  @include desktopView {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include tabletView {
+    display: flex;
+    justify-content: space-between;
+  }
+}
